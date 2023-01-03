@@ -11,10 +11,9 @@ namespace LaNave
     {
         static void Main(string[] args)
         {            
-            Nave n1 = new Nave("Magica", 400, 40);
-            Motore motoreNave = new Motore(5000, 400, "kerosene");
-            Nave n2 = new Nave("Magica", 400, 40);
-            Motore motoreNave2 = new Motore(7000, 600, "kerosene+");
+            Nave n1 = new Nave("Magica", 400, 40);   
+            Motore motoreNave = new Motore(5000, 400, "kerosene");   // With aggregation pattern the engine number 1 is built "outside the ship" or rather the two life cycles are independent
+            Motore motoreNave2 = new Motore(7000, 600, "kerosene+"); // With aggregation pattern the engine number 2 is built "outside the ship" or rather the two lyfe cycles are independent
             n1.Motore1= motoreNave;
             n1.Motore2 = motoreNave2;
             Console.WriteLine(n1.Motore1.Potenza);
