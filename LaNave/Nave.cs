@@ -17,6 +17,8 @@ namespace LaNave
         StatoNave _stato;
         Comandante _capitano;
         List<Posizione> _rotta;
+        Motore _motore1;
+        Motore _motore2;
         public Nave() { }
         public Nave(string nome, double stazza, int velocità, bool varata, Comandante capitano)
         {
@@ -24,14 +26,14 @@ namespace LaNave
             _stazza = stazza;
             _velocità = velocità;
             _varata = varata;
-            _capitano= capitano;
+            _capitano = capitano;
         }
         public Nave(string nome, double stazza, int velocità) : this(nome, stazza, velocità, false, null)
         { }
 
         public Nave(string nome, double stazza, int velocità, Comandante capitano) : this(nome, stazza, velocità, false, capitano)
         { _capitano = capitano; }
-        public Nave(string nome, double stazza, int velocità, bool varata) : this(nome, stazza, velocità,varata,null)
+        public Nave(string nome, double stazza, int velocità, bool varata) : this(nome, stazza, velocità, varata, null)
         { }
 
         public string Nome
@@ -41,23 +43,31 @@ namespace LaNave
         }
         public double Stazza
         {
-            get;set;
+            get; set;
         }
         public int Velocità
         {
-            get;set;
+            get; set;
         }
         public bool Varata
         {
-            get;set;
+            get; set;
         }
-        public StatoNave Stato 
+        public StatoNave Stato
         {
-            get;set;
+            get; set;
         }
         public Comandante Capitano
         {
-            get;set;
+            get; set;
+        }
+        public Motore Motore1
+        {
+            get; set;
+        }
+        public Motore Motore2
+        {
+            get; set;
         }
         public override string ToString()   //To view the overload press ctrl+shift+space inside the parenthesis
         {

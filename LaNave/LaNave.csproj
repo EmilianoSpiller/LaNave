@@ -44,6 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Comandante.cs" />
+    <Compile Include="Motore.cs" />
     <Compile Include="Posizione.cs" />
     <Compile Include="StatoNaveFile.cs" />
     <Compile Include="Nave.cs" />
